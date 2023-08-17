@@ -1,3 +1,6 @@
 npx sequelize model:generate --name User --attributes userId:integer,roleId:intege,name:string,nickname:string,email:string,password:string,address:string,phoneNumber:string
 
 npx seuquelize db:create
+
+아무런내용
+아무런내용
