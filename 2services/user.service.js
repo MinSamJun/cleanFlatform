@@ -1,7 +1,7 @@
 const UserRepository = require('../3repositories/user.repository');
 const ApiError = require('../apierror');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 class UserService {
   userRepository = new UserRepository();

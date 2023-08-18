@@ -2,8 +2,7 @@ const Sequelize = require('sequelize');
 
 class User extends Sequelize.Model {
   static initiate(sequelize) {
-    // User.init(
-    return super.init(
+    User.init(
       {
         userId: {
           type: Sequelize.INTEGER,
@@ -15,12 +14,8 @@ class User extends Sequelize.Model {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        loginId: {
-          type: Sequelize.STRING(30),
-          allowNull: false,
-        },
         name: {
-          type: Sequelize.STRING(40),
+          type: Sequelize.INTEGER(40),
           allowNull: false,
         },
         nickname: {
@@ -58,11 +53,11 @@ class User extends Sequelize.Model {
         timestamps: true,
         underscored: false,
         modelName: 'User',
-        tableName: 'User',
+        tableName: 'users',
         paranoid: false,
         charset: 'utf8',
         collate: 'utf8_general_ci',
-      }
+      },
     );
   }
 

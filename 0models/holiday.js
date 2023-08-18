@@ -2,8 +2,7 @@ const Sequelize = require('sequelize');
 
 class Holiday extends Sequelize.Model {
   static initiate(sequelize) {
-    // Holiday.init(
-    return super.init(
+    Holiday.init(
       {
         holidayId: {
           type: Sequelize.INTEGER,
@@ -25,11 +24,11 @@ class Holiday extends Sequelize.Model {
         timestamps: true,
         underscored: false,
         modelName: 'Holiday',
-        tableName: 'Holiday',
+        tableName: 'hodidays',
         paranoid: false,
         charset: 'utf8',
         collate: 'utf8_general_ci',
-      }
+      },
     );
   }
 

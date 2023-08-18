@@ -2,8 +2,7 @@ const Sequelize = require('sequelize');
 
 class Company extends Sequelize.Model {
   static initiate(sequelize) {
-    // Company.init(
-    return super.init(
+    Company.init(
       {
         companyId: {
           type: Sequelize.INTEGER,
@@ -33,11 +32,11 @@ class Company extends Sequelize.Model {
         timestamps: true,
         underscored: false,
         modelName: 'Company',
-        tableName: 'Company',
+        tableName: 'companies',
         paranoid: false,
         charset: 'utf8',
         collate: 'utf8_general_ci',
-      }
+      },
     );
   }
 

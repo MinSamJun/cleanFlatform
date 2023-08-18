@@ -2,8 +2,7 @@ const Sequelize = require('sequelize');
 
 class Review extends Sequelize.Model {
   static initiate(sequelize) {
-    // Review.init(
-    return super.init(
+    Review.init(
       {
         reviewId: {
           type: Sequelize.INTEGER,
@@ -33,11 +32,11 @@ class Review extends Sequelize.Model {
         timestamps: true,
         underscored: false,
         modelName: 'Review',
-        tableName: 'Review',
+        tableName: 'reviews',
         paranoid: false,
         charset: 'utf8',
         collate: 'utf8_general_ci',
-      }
+      },
     );
   }
 

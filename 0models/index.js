@@ -27,7 +27,10 @@ fs.readdirSync(__dirname)
   })
   .forEach((file) => {
     const modelDefiner = require(path.join(__dirname, file));
-    const model = modelDefiner.initiate(sequelize);
+    // const model = modelDefiner.initiate(sequelize);
+    const model = require(path.join(__dirname, file));
+    // console.log(model);
+    // console.log(model.name);
     db[model.name] = model;
   });
 
